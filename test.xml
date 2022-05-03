@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ServiceTag Automation Suite">
+
+    <!--TOTAL TEST LINK TEST CASES 212-->
+    <test name="Helper" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.InfoTest"/>
+        </classes>
+    </test>
+    <!--<test name="User Registration" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.UserRegistrationTest"/>
+        </classes>
+    </test>
+    <test name="Forgot Password" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.ForgotPasswordTest"/>
+        </classes>
+    </test>
+    <test name="Login" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.LoginTest"/>
+        </classes>
+    </test>
+        <test name="Scan" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.ScanTest"/>
+        </classes>
+    </test>
+    <test name="Documents" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.DocumentationTest"/>
+        </classes>
+    </test>
+    <test name="More" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.MoreTest"/>
+        </classes>
+    </test>
+    <test name="Manual Entry" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.ManualEntryTest"/>
+        </classes>
+    </test>
+    <test name="New Group" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.NewGroupTest"/>
+        </classes>
+    </test>
+
+    <test name="Edit Group" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.EditGroupTest"/>
+        </classes>
+    </test>
+   <test name="Product Info" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.ProductInfoTest"/>
+        </classes>
+    </test>
+    <test name="External ID" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.ExternalIdTest"/>
+        </classes>
+    </test>
+    &lt;!&ndash;<test name="LocationTest" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.LocationTest"/>
+        </classes>
+    </test>&ndash;&gt;
+    <test name="Notes" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.NotesTest"/>
+        </classes>
+    </test>
+
+    <test name="Product Registration" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.LuminaireRegistrationTest"/>
+        </classes>
+    </test>
+    <test name="Service Parts" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.ServicePartsTest"/>
+        </classes>
+    </test>
+    <test name="Shopping basket" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.ShoppingBasketTest"/>
+        </classes>
+    </test>
+    <test name="Product Photo" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.ProductPhotoTest"/>
+        </classes>
+    </test>
+&lt;!&ndash;    &lt;!&ndash;<test name="GroupInfo" preserve-order="true">&ndash;&gt;&ndash;&gt;
+&lt;!&ndash;        &lt;!&ndash;<classes>&ndash;&gt;&ndash;&gt;
+&lt;!&ndash;            &lt;!&ndash;<class name="com.signify.test.function.GroupInfoTest"/>&ndash;&gt;&ndash;&gt;
+&lt;!&ndash;        &lt;!&ndash;</classes>&ndash;&gt;&ndash;&gt;
+&lt;!&ndash;    &lt;!&ndash;</test>&ndash;&gt;&ndash;&gt;
+    <test name="Log" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.LogTest"/>
+        </classes>
+    </test>
+    &lt;!&ndash;<test name="ProductAccessories" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.AccessoriesTest"/>
+        </classes>
+    </test>&ndash;&gt;
+    <test name="ReplacementFlow" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.ReplacementFlowTest"/>
+        </classes>
+    </test>
+    <test name="12NCLuminaire" preserve-order="true">
+        <classes>
+            <class name="com.signify.test.function.LuminaireTwelveNCTest"/>
+        </classes>
+    </test>-->
+</suite>
