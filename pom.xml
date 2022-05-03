@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.philips.li</groupId>
+    <artifactId>AppiumTest</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <xray.surefire.location>${basedir}/target/surefire-reports</xray.surefire.location>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <encoding>iso-8859-1</encoding>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.21.0</version>
+                <inherited>true</inherited>
+                <configuration>
+                    <systemPropertyVariables>
+
+                        <PLATFORM_NAME>Android</PLATFORM_NAME>
+
+                        <!--IOS_SECIFIC-->
+                     <!--   <PLATFORM_NAME>IOS</PLATFORM_NAME>
+                        <BUNDLE_ID>com.philips.li.service.tag.beta</BUNDLE_ID>
+                        <LANGUAGE_CODE>en</LANGUAGE_CODE>
+
+                        <IOS_DEVICE_NAME>iPhone 8</IOS_DEVICE_NAME>
+                        <IOS_DEVICE_PLATFORM_VERSION>14.2</IOS_DEVICE_PLATFORM_VERSION>
+                        <UDID>815a99fe96758a87abf31df9598c41df002fe05b</UDID>-->
+
+                        <!--iPhone6_10.3.3-->
+<!--                        <IOS_DEVICE_NAME>iPhone6_10.3.3(White)</IOS_DEVICE_NAME>-->
+<!--                        <IOS_DEVICE_PLATFORM_VERSION>10.3.3</IOS_DEVICE_PLATFORM_VERSION>-->
+<!--                        <UDID>34a2c708ae302be06991c45a897e144c6935cc72</UDID>-->
+
+                        <!--iPhone7_10.3.3-->
+                        <!--<IOS_DEVICE_NAME>iPhone7 10.3.3</IOS_DEVICE_NAME>-->
+                        <!--<IOS_DEVICE_PLATFORM_VERSION>10.3.3</IOS_DEVICE_PLATFORM_VERSION>-->
+                        <!--<UDID>dd89cbf66bec4dcf691a9c224209cc7165a0e184</UDID>-->
+
+                        <!--iPhone6Plus_12.1.4-->
+<!--                        <IOS_DEVICE_NAME>iPhone6Plus 12.1.4</IOS_DEVICE_NAME>-->
+<!--                        <IOS_DEVICE_PLATFORM_VERSION>12.1.4</IOS_DEVICE_PLATFORM_VERSION>-->
+<!--                        <UDID>a089b67148fe357a1715531a3e491007158cd54c</UDID>-->
+
+                        <!--iPhone6Plus_12.3.1-->
+                        <!--<IOS_DEVICE_NAME>iPhone6Plus11.3</IOS_DEVICE_NAME>-->
+                        <!--<IOS_DEVICE_PLATFORM_VERSION>12.3.1</IOS_DEVICE_PLATFORM_VERSION>-->
+                        <!--<UDID>e59029f55825bec129e5a750b7cac8c6ecb9a695</UDID>-->
+
+                        <!--iPhone7Plus_11.2.6 (Pink)-->
+                        <!--<IOS_DEVICE_NAME>iPhone7Plus_11.2.6 (Pink)</IOS_DEVICE_NAME>-->
+                        <!--<IOS_DEVICE_PLATFORM_VERSION>12.4.1</IOS_DEVICE_PLATFORM_VERSION>-->
+                        <!--<UDID>9759f3622a231c42f2d33cedc0eedc3df0ab9456</UDID>-->
+
+                        <!--iPhone_8Plus_13.0-->
+                        <!--<IOS_DEVICE_NAME>iPhone (2)</IOS_DEVICE_NAME>-->
+                        <!--<IOS_DEVICE_PLATFORM_VERSION>13.0</IOS_DEVICE_PLATFORM_VERSION>-->
+                        <!--<UDID>aff4ec73684cf0a268fdc8bd1328a346aeaefa1a</UDID>-->
+
+
+                        <!--mvn test -DPLATFORM_NAME="Android" -DDEVICE_NAME="c5b9ad5d" -DDEVICE_PLATFORM_VERSION="8.1.0"-->
+                        <!--mvn test -DPLATFORM_NAME="IOS" -DIOS_DEVICE_NAME="iPhone6_10.3.3(White)" -DIOS_DEVICE_PLATFORM_VERSION="10.3.3" DUUID="34a2c708ae302be06991c45a897e144c6935cc72" DLANGUAGE_CODE="en"-->
+                    </systemPropertyVariables>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>./testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <properties>
+                        <property>
+                            <name>reporter</name>
+                            <value>org.testng.reporters.XMLReporter:generateTestResultAttributes=true,generateGroupsAttribute=true</value>
+                        </property>
+                    </properties>
+                </configuration>
+
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>localrepository</id>
+            <url>file://${basedir}/lib</url>
+        </repository>
+    </repositories>
+    <repository>
+        <id>xpandit</id>
+        <name>xpand-releases</name>
+        <url>http://maven.xpand-it.com/artifactory/releases</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+    </repository>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>7.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>21.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.9.10</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+        <groupId>com.squareup.okhttp</groupId>
+        <artifactId>okhttp</artifactId>
+        <version>2.7.5</version>
+    </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20151123</version>
+        </dependency>
+        <!--Go to root folder of this project and execute below command-->
+        <!--mvn install:install-file -Dfile=./lib/localization-verification-1.0-SNAPSHOT.jar -DgroupId=com.signify -DartifactId=localization-verification -Dversion=1.0-SNAPSHOT -Dpackaging=jar-->
+        <dependency>
+            <groupId>com.signify</groupId>
+            <artifactId>localization-verification</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--mvn install:install-file -Dfile=./lib/phidget22.jar -DgroupId=com.phidget22 -DartifactId=phidget22 -Dversion=1.0 -Dpackaging=jar-->
+        <dependency>
+            <groupId>com.phidget22</groupId>
+            <artifactId>phidget22</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!--mvn install:install-file -Dfile=./lib/phidget22usb.jar -DgroupId=com.phidget22 -DartifactId=phidget22usb -Dversion=1.0 -Dpackaging=jar-->
+        <dependency>
+            <groupId>com.phidget22</groupId>
+            <artifactId>phidget22usb</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.10-FINAL</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.10-FINAL</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-translate</artifactId>
+            <version>0.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.9.10</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/jexcelapi/jxl -->
+
+<!--        <dependency>
+            <groupId>com.xpandit.xray</groupId>
+            <artifactId>xray-testng-extensions</artifactId>
+            <version>1.1.0</version>
+            <scope>test</scope>
+        </dependency>-->
+    </dependencies>
+
+</project>
